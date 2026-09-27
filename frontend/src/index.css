@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+.theme-toggle-button {
+	width: 44px;
+	height: 44px;
+	flex: 0 0 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid rgb(255 255 255 / 12%);
+	border-radius: 8px;
+	background: rgb(255 255 255 / 4%);
+	color: #fbbf24;
+	transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.theme-toggle-floating {
+	position: fixed;
+	left: max(16px, env(safe-area-inset-left));
+	bottom: max(16px, env(safe-area-inset-bottom));
+	z-index: 60;
+	box-shadow: 0 6px 18px rgb(0 0 0 / 24%);
+}
+
+.theme-toggle-button:hover {
+	background: rgb(255 255 255 / 9%);
+	border-color: rgb(255 255 255 / 22%);
+}
+
+.theme-toggle-icon-frame {
+	width: 20px;
+	height: 20px;
+	flex: 0 0 20px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.theme-toggle-icon {
+	width: 18px;
+	height: 18px;
+	display: block;
+	flex: 0 0 18px;
+}
+
+.theme-toggle-moon {
+	color: #4f8dbf;
+}
+
+html[data-theme="light"] {
+	color-scheme: light;
+	background: #f7f8fa;
+}
+
+html[data-theme="light"] body {
+	background: #f7f8fa;
+	color: #20242a;
+}
+
+html[data-theme="light"] [class*="bg-[#08090a]"],
+html[data-theme="light"] [class*="bg-[#0a0b0c]"],
+html[data-theme="light"] [class*="bg-[#0c0d0f]"],
+html[data-theme="light"] [class*="bg-[#0d0f12]"],
+html[data-theme="light"] [class*="bg-[#0f1011]"],
+html[data-theme="light"] [class*="bg-[#101214]"],
+html[data-theme="light"] [class*="bg-[#111316]"] {
+	background-color: #fff !important;
+}
+
+html[data-theme="light"] [class*="text-white"] {
+	color: #303740 !important;
+}
+
+html[data-theme="light"] [class*="border-white"] {
+	border-color: rgb(31 41 55 / 14%) !important;
+}
+
+html[data-theme="light"] [class*="placeholder:text-white"]::placeholder {
+	color: #8a929d !important;
+}
+
+html[data-theme="light"] [class*="hover:bg-white"]:hover {
+	background-color: rgb(31 41 55 / 7%) !important;
+}
+
+html[data-theme="light"] .theme-toggle-button {
+	color: #d97706;
+	background: #fff;
+	border-color: rgb(31 41 55 / 18%);
+}
+
+html[data-theme="light"] .theme-toggle-button:hover {
+	background: #f1f3f5 !important;
+	border-color: rgb(31 41 55 / 28%);
+}
+
+html[data-theme="light"] .theme-toggle-moon {
+	color: #436f99;
+}
+
+html[data-theme="light"] input,
+html[data-theme="light"] textarea,
+html[data-theme="light"] select {
+	color-scheme: light;
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="64" height="64" aria-label="WebBuilder icon">
+  <g stroke="#FF6600" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path
+      d="M 170 180 C 140 180 115 195 115 220 A 150 150 0 1 0 170 120"
+      stroke-width="26"
+    />
+    <path
+      d="M 170 180 L 205 320 L 245 180 L 285 320 L 320 180 C 335 155 365 155 390 155 C 425 155 450 175 450 210 C 450 238 430 255 405 260 C 435 265 455 285 455 320 C 455 360 425 380 380 380 L 320 380"
+      stroke-width="28"
+    />
+    <line x1="330" y1="265" x2="400" y2="265" stroke-width="26" />
+  </g>
+</svg>

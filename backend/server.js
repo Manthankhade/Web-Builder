@@ -8,7 +8,7 @@ import communityRouter from "./routes/communityRoutes.js";
 import paymentRouter from "./routes/paymentRoutes.js";
 import { stripeWebhook } from "./controllers/paymentsController.js";
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 const corsOrigins = [
   "http://localhost:3000",
@@ -60,7 +60,7 @@ app.use((err, req, res, next) => {
 
 try {
   await connectDB();
-  app.listen(PORT, () => {
+  app.listen(PORT,'0.0.0.0', () => {
     console.log(`Server Running on PORT ${PORT}`);
   });
 } catch (err) {

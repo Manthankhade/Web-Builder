@@ -13,9 +13,10 @@ const app = express();
 const corsOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
+  "https://web-builder-frontend.onrender.com",
   ...(process.env.FRONTEND_URL || "")
     .split(",")
-    .map((origin) => origin.trim())
+    .map((origin) => origin.trim().replace(/\/+$/, ""))
     .filter(Boolean),
 ];
 
